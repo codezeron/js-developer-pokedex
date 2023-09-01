@@ -19,9 +19,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const modalContent = document.getElementById("modalContent");
     const modalImage = document.getElementById("modalImage");
     
-    const pokemonDetail = await pokemonsdata.find(element => element.name === pokemonName);
+    const pokemonDetail = pokemonsdata.find(element => element.name === pokemonName);
   
-    const statusHtml = `
+    const statusHtml = await `
       <p>Altura: ${pokemonDetail.height}</p>
       <p>Peso: ${pokemonDetail.weight}</p>
       <p>Força: ${pokemonDetail.status.attack}</p>
